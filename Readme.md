@@ -39,17 +39,24 @@ The server will start at <http://localhost:8080>.
 The application defines following REST APIs
 
 ```
-1. GET /tweets - Get All Tweets
+1. GET /emps - Get All Employee
+1. GET /depts - Get All Dept
 
-2. POST /tweets - Create a new Tweet
+2. POST /emps - Create a new Employee
+2. POST /depts - Create a new Dept
 
-3. GET /tweets/{id} - Retrieve a Tweet by Id
+3. GET /emps/{id} - Retrieve a Employee by Id
+3. GET /depts/{id} - Retrieve a Dept by Id
 
-3. PUT /tweets/{id} - Update a Tweet
 
-4. DELETE /tweets/{id} - Delete a Tweet
+4. PUT /emps/{id} - Update a Employee
+4. PUT /depts/{id} - Update a Dept
 
-4. GET /stream/tweets - Stream tweets to a browser as Server-Sent Events
+5. DELETE /emps/{id} - Delete a Employee
+5. DELETE /depts/{id} - Delete a Dept
+
+6. GET /stream/emps - Stream Employee to a browser as Server-Sent Events
+6. GET /stream/depts - Stream Dept to a browser as Server-Sent Events
 ```
 
 ## Running integration tests
