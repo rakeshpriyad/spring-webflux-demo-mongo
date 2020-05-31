@@ -1,7 +1,6 @@
 package com.example.webfluxdemo;
 
 import com.example.webfluxdemo.model.Employee;
-import com.example.webfluxdemo.model.Tweet;
 import com.example.webfluxdemo.repository.EmpRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -32,7 +31,7 @@ public class WebfluxDemoApplicationTests {
 		webTestClient.post().uri("/emps")
 				.contentType(MediaType.APPLICATION_JSON_UTF8)
                 .accept(MediaType.APPLICATION_JSON_UTF8)
-                .body(Mono.just(emp), Tweet.class)
+                .body(Mono.just(emp), Employee.class)
 				.exchange()
 				.expectStatus().isOk()
 				.expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
@@ -48,7 +47,7 @@ public class WebfluxDemoApplicationTests {
                 .exchange()
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
-                .expectBodyList(Tweet.class);
+                .expectBodyList(Employee.class);
     }
 
     @Test
@@ -74,7 +73,7 @@ public class WebfluxDemoApplicationTests {
                 .uri("/emps/{id}", Collections.singletonMap("id", emp.getId()))
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .accept(MediaType.APPLICATION_JSON_UTF8)
-                .body(Mono.just(newEmp), Tweet.class)
+                .body(Mono.just(newEmp), Employee.class)
                 .exchange()
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)

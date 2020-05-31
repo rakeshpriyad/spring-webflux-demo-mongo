@@ -62,3 +62,18 @@ The application defines following REST APIs
 ## Running integration tests
 
 The project also contains integration tests for all the Rest APIs. For running the integration tests, go to the root directory of the project and type `mvn test` in your terminal.
+
+Functional Programming is under com.example.webfluxdemo.functionnal.
+
+URL for functional programming:
+http://localhost:8080/empList  # Get all emp list
+
+#Create emp
+http://localhost:8080/emp/create
+
+{
+  "id": 6,
+  "name": "RR",
+  "salary": 500
+ }
+ 
